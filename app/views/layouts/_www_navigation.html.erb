@@ -1,0 +1,15 @@
+<ul class="nav nav-list">
+  <li class="nav-header">Quick Links</li>
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Register As Donor</a></li>
+  <li><%= link_to 'Post Your Request', new_blood_request_path %></li>
+  <li><%= link_to 'Share Experience', new_feed_back_path %></li>
+  <li><a href="#">Contact Us</a></li>
+  <li class="nav-header">FAQs</li>
+  <% Faq.all.each do |faq| %>
+    <li class="active"><%= link_to faq.qlabel, answer_faq_path(faq) %></li>
+  <% end %>
+  <li><a href="#">Why Donate Blood</a></li>
+  <li><a href="#">Who Needs Blood</a></li>
+  <li><a href="#">Tips On Donation</a></li>
+</ul>

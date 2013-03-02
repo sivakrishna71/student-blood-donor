@@ -1,0 +1,100 @@
+// Formtastic ----------------------------
+$default_font: "Helvetica Neue", Helvetica, Arial, sans-serif
+.rule_invalid
+  width: .5em
+  height: .5em
+  border-radius: 40px
+  float: right
+  margin: 0 .25em
+
+.rule_invalid.error
+  background: #BD362F
+
+.rule_invalid.warning
+  background: #F89406
+
+.formtastic .input, .formtastic .inputs
+  overflow: visible
+
+.formtastic ul, .formtastic ol
+  list-style: none
+  margin-left: 0
+
+.formtastic .actions li
+  padding: 5px
+  display: inline-block
+
+.choices label
+  text-align: left
+
+form.formtastic fieldset
+  legend
+    span
+      font-family: $default_font
+      font-size: 18px
+      font-weight: normal
+      color: #99AF75
+    &.label
+      padding-top: 0
+      label
+        color: #444
+        padding-top: 0
+        width: auto
+  abbr
+    margin-left: 3px
+    color: red
+  &.inputs > ol
+    margin-bottom: 5px
+  ol li
+    &.date fieldset ol
+      border: none
+      padding-left: 25%
+    &.string, &.stringish
+      input.datepicker, input.date
+        width: 186px
+    &.hidden
+      display: none !important
+    &.select label
+      padding-top: 0
+  &.inputs
+    ol li.calendar input
+      width: 185px
+    margin-top: 1em
+    li.threeColumns ol li
+      float: left
+      width: 33%
+      white-space: nowrap
+      overflow: hidden
+    li:not(.column_50) .plain
+      padding-left: 25%
+      width: 670px
+  .inline-hints
+    font-size: 10px
+    font-style: italic
+    margin-left: 160px
+    width: 220px
+    line-height: 1.2
+  &.buttons
+    margin: 1em 0
+    a.button
+      display: block
+      height: 17px
+      line-height: 15px
+
+.errorExplanation
+  padding: 5px 10px
+  border: 1px solid #900
+  background: rgba(255,0,0,0.1)
+  .error_count
+    margin: 0.5em 0
+    color: red
+    float: left
+    font-weight: bold
+  ul
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+    li
+      color: #C00

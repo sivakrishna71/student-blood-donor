@@ -1,0 +1,33 @@
+%h4
+  Please use the form below to to Post your Required Blood Request
+.form-horizontal
+  = semantic_form_for @blood_request do |f|
+    = f.inputs do
+      .control-group
+        = f.input :patient_name, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :reqd_blood_group, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :gender, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :age, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :units, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :landline, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :mobile_number, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :hospital_address, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :email, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :patient_address, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :purpose, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :city, :label_html => {:class => "control-label"}
+    
+    .form-actions
+      = f.buttons do
+        = f.commit_button "Save", :button_html => {:class => "btn"}

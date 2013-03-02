@@ -1,0 +1,19 @@
+.form-horizontal
+  = semantic_form_for @feed_back do |f|
+    = f.inputs do
+      .control-group
+        = f.input :name, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :email, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :mobile, :label_html => {:class => "control-label"}
+      .control-group
+        = f.input :message, :label_html => {:class => "control-label"}
+    
+    .form-actions
+      = f.buttons do
+        = f.commit_button "Save", :button_html => {:class => "btn"}
+
+
+
+= render :partial => 'table', :locals => {:objects => @feed_backs}
